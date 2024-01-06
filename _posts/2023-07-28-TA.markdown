@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Teaching - UCSB"
+startdate: 2023-01-01
+categories: engagement
+subtype: Teaching Assistant
+description: "Do the teaching assistant for the following courses:
+<ul>
+<li>Winter'23 CS162, Programming Languages</li>
+<li>Winter'24 CS162, Programming Languages</li>
+<ul>"
+---

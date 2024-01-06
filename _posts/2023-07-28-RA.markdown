@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Research Assistant - UCSB"
+startdate: 2022-09-01
+categories: engagement
+subtype: Research Assistant at PLSE Lab
+description:
+---
