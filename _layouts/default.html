@@ -63,6 +63,7 @@
                 <a href="mailto:hongbowen@ucsb.edu">hongbowen@ucsb.edu</a><br>
                 <a href="https://github.com/whbjzzwjxq">GitHub</a> &nbsp;/&nbsp;
                 <a href="https://scholar.google.com/citations?user=T3_w464AAAAJ">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=T3_w464AAAAJ">CV</a>
               </p>
             </td>
           </tr>
@@ -146,7 +147,7 @@
                 Now
                 {% endif %}
               </div>
-              <a href="#sec-engagements">{{post.title}}</a>
+              {{post.title}}
               <br>
               <em>{{post.subtype}}</em>
               <p>{{post.description}}</p>
@@ -178,11 +179,12 @@
           <tr>
             <td style="padding:1%;width:75%;vertical-align:middle">
               <div>{{ post.date | date: "%Y - %m" }}</div>
-              <a href="#sec-awards">{{post.title}}</a>
-              <br>
               {% if post.website %}
-              <a href="{{post.website}}">website</a> /
+              <a href="{{post.website}}">{{post.title}}</a>
+              {% else %}
+              {{post.title}}
               {% endif %}
+              <br>
             </td>
             <td style="padding:1%;width:25%;vertical-align:middle;min-width:120px">
             </td>

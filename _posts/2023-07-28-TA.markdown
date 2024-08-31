@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Teaching - UCSB"
+title:  "UCSB"
 startdate: 2023-01-01
 categories: engagement
 subtype: Teaching Assistant

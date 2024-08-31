@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols"
+image: /images/Foray.png
+categories: publication
+website: https://www.sigsac.org/ccs/CCS2024/program/accepted-papers.html
+bib: /bibtexs/Foray.bib
+pdf: /pdfs/24_CCS_Foray.pdf
+venue: "ACM CCS'24"
+authors: "<b>Hongbo Wen</b>, Hanzhi Liu, Jiaxin Song, Yanju Chen, Wenbo Guo, Yu Feng"
+---
