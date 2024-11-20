@@ -5,7 +5,8 @@ image: /images/Foray.png
 categories: publication
 website: https://www.sigsac.org/ccs/CCS2024/program/accepted-papers.html
 bib: /bibtexs/Foray.bib
-pdf: /pdfs/24_CCS_Foray.pdf
+pdf: https://arxiv.org/pdf/2407.06348
+code: https://github.com/whbjzzwjxq/Foray
 venue: "ACM CCS'24"
 authors: "<b>Hongbo Wen</b>, Hanzhi Liu, Jiaxin Song, Yanju Chen, Wenbo Guo, Yu Feng"
 ---
