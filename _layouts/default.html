@@ -31,8 +31,7 @@
                 I am a PhD student at the <a href="https://www.cs.ucsb.edu/">School of Computer Science</a>,
                 <a href="https://www.ucsb.edu/">UC Santa Barbara</a>.
                 My PhD advisor is <a href="https://fredfeng.github.io/">Yu Feng</a>.
-                I am also glad to be guided by <a href="https://sites.cs.ucsb.edu/~yanju/">Yanju Chen</a> at UC Santa Barbara
-                and <a href="https://www.cs.utexas.edu/~isil/">Isil Dillig</a> at UT Austin.
+                I am also glad to be guided by <a href="https://sites.cs.ucsb.edu/~yanju/">Yanju Chen</a> at UC Santa Barbara.
               </p>
               <p>
                 Before attending UCSB, I received my undergraduate degree from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>
@@ -63,7 +62,8 @@
               <p>
                 <a href="mailto:hongbowen@ucsb.edu">hongbowen@ucsb.edu</a><br>
                 <a href="https://github.com/whbjzzwjxq">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=T3_w464AAAAJ">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=T3_w464AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="/pdfs/Hongbo_Wen_CV.pdf">CV</a>
               </p>
             </td>
           </tr>
@@ -147,7 +147,7 @@
                 Now
                 {% endif %}
               </div>
-              <a href="#sec-engagements">{{post.title}}</a>
+              {{post.title}}
               <br>
               <em>{{post.subtype}}</em>
               <p>{{post.description}}</p>
@@ -179,11 +179,12 @@
           <tr>
             <td style="padding:1%;width:75%;vertical-align:middle">
               <div>{{ post.date | date: "%Y - %m" }}</div>
-              <a href="#sec-awards">{{post.title}}</a>
-              <br>
               {% if post.website %}
-              <a href="{{post.website}}">website</a> /
+              <a href="{{post.website}}">{{post.title}}</a>
+              {% else %}
+              {{post.title}}
               {% endif %}
+              <br>
             </td>
             <td style="padding:1%;width:25%;vertical-align:middle;min-width:120px">
             </td>
