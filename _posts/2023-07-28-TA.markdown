@@ -8,5 +8,6 @@ description: "Do the teaching assistant for the following courses:
 <ul>
 <li>Winter'23 CS162, Programming Languages</li>
 <li>Winter'24 CS162, Programming Languages</li>
+<li>Winter'25 CS162, Programming Languages</li>
 <ul>"
 ---
