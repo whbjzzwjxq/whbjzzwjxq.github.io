@@ -151,6 +151,9 @@
               <br>
               <em>{{post.subtype}}</em>
               <p>{{post.description}}</p>
+              {% if post.link %}
+              <a href="{{post.link}}">link</a> /
+              {% endif %}
             </td>
             <td style="padding:1%;width:25%;vertical-align:middle;min-width:120px">
               {% if post.image %}
