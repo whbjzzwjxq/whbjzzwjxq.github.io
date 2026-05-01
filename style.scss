@@ -1,17 +1,14 @@
 ---
 ---
 
-//
-// IMPORTS
-//
-
-//@import "reset";
-//@import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
 /**************/
 /* BASE RULES */
 /**************/
+
+* {
+  text-shadow: transparent 0 0 0 !important;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
@@ -25,6 +22,8 @@ a:hover {
 
 body {
   background-color: #fffaf0;
+  margin: 0;
+  padding: 0;
 }
 
 body,
@@ -32,77 +31,134 @@ td,
 th,
 tr,
 p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-display: auto;
-}
-
-strong {
-  font-family: 'Times New Roman', Times, sans-serif;
-  font-size: 14px;
-  font-display: auto;
-}
-
-h2 {
-  font-family: 'Times New Roman', Times, sans-serif;
-  font-size: 22px;
-  font-display: auto;
-  font-weight: bolder;
-  padding: 0px;
-  margin: 0px;
-  display:inline;
-}
-
-h3 {
-  font-family: 'Times New Roman', Times, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  font-display: auto;
-  padding: 0px;
-  margin: 0px;
-  display:inline;
+a,
+li {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 15px;
 }
 
 h1 {
-  font-family: 'Times New Roman', Times, sans-serif;
-  font-size: 32px;
-  font-weight: bolder;
-  font-display: auto;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 42px;
+  font-weight: 400;
   text-align: center;
-  padding: 0px;
-  margin-block-start: 14px;
-  margin-block-end: 14px;
-  margin-left: 0px;
-  margin-right: 0px;
+  padding: 0;
+  margin: 14px 0;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+h2 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+h3 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0;
+  margin: 8px 0 4px 0;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+papertitle {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+conference {
+  font-weight: 700;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
-//@import "svg-icons";
+.nav-bar {
+  text-align: center;
+  padding: 10px 0 5px 0;
+  font-size: 15px;
+}
+
+.nav-bar a {
+  margin: 0 12px;
+}
+
+.section-heading {
+  padding: 20px 0 8px 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.track-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 10px 0 6px 0;
+}
+
+.pub-entry {
+  padding: 6px 0;
+}
+
+.pub-venue {
+  font-weight: 700;
+  color: #333;
+}
+
+.pub-title {
+  font-weight: 700;
+}
+
+.pub-authors {
+  font-style: italic;
+}
+
+.pub-links a {
+  margin-right: 6px;
+}
+
+.talk-entry td {
+  padding: 4px 8px;
+  vertical-align: top;
+}
+
+.grant-entry td {
+  padding: 4px 8px;
+  vertical-align: top;
+}
+
+.icon-link {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 3px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.label-crypto {
+  background-color: #e8f0fe;
+  color: #1a56db;
+}
+
+.label-vuln {
+  background-color: #fef3e2;
+  color: #b45309;
+}
+
+.label-agent {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+
+img.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}

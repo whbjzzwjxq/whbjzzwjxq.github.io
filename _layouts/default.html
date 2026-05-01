@@ -3,215 +3,352 @@
 
 <head>
   <title>{{ site.name }}</title>
-
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
   <meta name="author" content="{{ site.name }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
 </head>
 
-
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:top">
-              <h1>
-                Hongbo Wen
-              </h1>
-              <p>
-                I am a PhD student at the <a href="https://www.cs.ucsb.edu/">School of Computer Science</a>,
-                <a href="https://www.ucsb.edu/">UC Santa Barbara</a>.
-                My PhD advisor is <a href="https://fredfeng.github.io/">Yu Feng</a>.
-                I am also glad to be guided by <a href="https://sites.cs.ucsb.edu/~yanju/">Yanju Chen</a> at UC Santa Barbara.
-              </p>
-              <p>
-                Before attending UCSB, I received my undergraduate degree from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>
-                and had a two-year industry experience at <a href="https://en.megvii.com/">Megvii</a>
-                and <a href="https://veridise.com/">Veridise</a>, focusing on using academic techniques to solve real world problems.
-              </p>
+  <table style="width:100%;max-width:970px;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0">
+      <td style="padding:0">
 
-              <h2 style="text-align: left;">Research Interests</h2>
+        <!-- Header -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0">
+            <td style="padding:2.5%;width:67%;vertical-align:top">
+              <h1>Hongbo Wen</h1>
               <p>
-                I am focusing on helping complex software systems,
-                such as blockchain, zero-knowledge proofs, and operating systems,
-                become more reliable and stable. I am also interested in combing logical
-                reasoning and nerual reasoning and apply those methods in practice.
-                Here are some keywords about my research:
+                I am a Ph.D. candidate in Computer Science at
+                <a href="https://www.ucsb.edu/">UC Santa Barbara</a>,
+                advised by <a href="https://fredfeng.github.io/">Yu Feng</a>
+                and working closely with <a href="https://dahliamalkhi.github.io/">Dahlia Malkhi</a> and <a href="https://sites.cs.ucsb.edu/~yanju/">Yanju Chen</a>.
+                Before UCSB, I received my B.Eng. from
+                <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>.
               </p>
               <p>
-                <ul>
-                  <li>Programming Languages</li>
-                  <li>Program Analysis</li>
-                  <li>Program Synthesis</li>
-                  <li>Blockchain</li>
-                  <li>Zero-Knowledge Proof</li>
-                </ul>
+                I develop program analysis and synthesis techniques to secure complex software systems,
+                with applications in <b>LLM agent security</b>,
+                <b>cryptography &amp; zero-knowledge proofs</b>, and
+                <b>AI-augmented vulnerability discovery</b>.
+                My work has been supported by
+                <b>Ethereum Foundation</b>, <b>Google Security</b>, and <b>a16z crypto</b>.
               </p>
-            </td>
-            <td style="padding:5%;width:30%;max-width:30%;vertical-align:top">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="../images/avatar.jpg">
-              <p>
-                <a href="mailto:hongbowen@ucsb.edu">hongbowen@ucsb.edu</a><br>
-                <a href="https://github.com/whbjzzwjxq">GitHub</a> &nbsp;/&nbsp;
+              <p style="text-align:center">
+                <a href="mailto:hongbowen@ucsb.edu">Email</a> &nbsp;/&nbsp;
                 <a href="https://scholar.google.com/citations?user=T3_w464AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://github.com/whbjzzwjxq">GitHub</a> &nbsp;/&nbsp;
                 <a href="/pdfs/Hongbo_Wen_CV.pdf">CV</a>
               </p>
             </td>
+            <td style="padding:2.5%;width:28%;max-width:28%;vertical-align:top">
+              <img class="profile-photo" alt="profile photo" src="/images/avatar.jpg">
+            </td>
           </tr>
         </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:1%;width:100%;vertical-align:middle">
-              <h2 style="text-align: left;" id="sec-publications">Publications</h2>
-              <br>
-              (* Equal Contribution)
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'publication' %}
-          <tr>
-            <td style="padding:1%;width:75%;vertical-align:middle">
-              <div style="font-weight: bolder;">{{post.venue}}</div>
-              <a href="{{post.website}}">{{post.title}}</a>
-              <br>
-              <em>{{post.authors}}</em>
-              <br>
-              {% if post.pdf %}
-              <a href="{{post.pdf}}">pdf</a> /
-              {% endif %}
-              {% if post.bib %}
-              <a href="{{post.bib}}">bib</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-            <td style="padding:1%;width:25%;vertical-align:middle;min-width:120px">
-              {% if post.image %}
-              <img src="{{post.image}}" alt="project image" style="width: auto; max-height:100px; max-width:auto;" />
-              {% endif %}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:1%;width:100%;vertical-align:middle">
-              <h2 style="text-align: left;" id="sec-engagements">Industry/Academia Engagements</h2>
-              <br>
-              (Engagements beyond pure research publications)
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'engagement' %}
-          <tr>
-            <td style="padding:1%;width:75%;vertical-align:middle">
-              <div> 
-                <b>From</b>
-                {{ post.startdate | date: "%Y - %m" }}
-                <b>to</b>
-                {% if post.enddate %}
-                {{ post.enddate | date: "%Y - %m" }}
-                {% else %}
-                Now
-                {% endif %}
-              </div>
-              {{post.title}}
-              <br>
-              <em>{{post.subtype}}</em>
-              <p>{{post.description}}</p>
-              {% if post.link %}
-              <a href="{{post.link}}">link</a> /
-              {% endif %}
-            </td>
-            <td style="padding:1%;width:25%;vertical-align:middle;min-width:120px">
-              {% if post.image %}
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-              {% endif %}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:1%;width:100%;vertical-align:middle">
-              <h2 style="text-align: left;" id="sec-awards">Honors and Awards</h2>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <!-- Navigation -->
+        <div class="nav-bar">
+          <a href="#sec-publications">Publications</a>
+          <a href="#sec-vulns">Zero-Day Discoveries</a>
+          <a href="#sec-talks">Talks</a>
+          <a href="#sec-grants">Grants & Awards</a>
+          <a href="#sec-experience">Experience</a>
+          <a href="#sec-service">Service</a>
+        </div>
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'award' %}
+        <hr style="border:0;border-top:1px solid #ccc;margin:5px 0 0 0;">
+
+        <!-- ==================== Publications ==================== -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td style="padding:1%;width:75%;vertical-align:middle">
-              <div>{{ post.date | date: "%Y - %m" }}</div>
-              {% if post.website %}
-              <a href="{{post.website}}">{{post.title}}</a>
-              {% else %}
-              {{post.title}}
-              {% endif %}
-              <br>
-            </td>
-            <td style="padding:1%;width:25%;vertical-align:middle;min-width:120px">
+            <td style="padding:20px 2.5% 0 2.5%">
+              <h2 id="sec-publications">Publications</h2>
+              <p style="margin-top:4px;color:#666;">* Equal Contribution</p>
             </td>
           </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
         </table>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <!-- SEMIA (2026) -->
           <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">arXiv 2026</span>
+              <span class="label label-agent">LLM Agent Security</span><br>
+              <papertitle>SEMIA: Auditing Agent Skills via Constraint-Guided Representation Synthesis</papertitle><br>
+              <span class="pub-authors"><b>Hongbo Wen</b>, Ying Li, Hanzhi Liu, Chaofan Shou, Yanju Chen, Yuan Tian, Yu Feng</span><br>
+              <span class="pub-links">
+                <a href="/pdfs/26_ARXIV_SEMIA.pdf">pdf</a>
+              </span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+          <!-- Tabby (OOPSLA'25) -->
+          <tr>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">OOPSLA'25</span>
+              <span class="label label-crypto">Crypto & ZKP</span><br>
+              <papertitle>Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits</papertitle><br>
+              <span class="pub-authors">Junrui Liu, Jiaxin Song, Yanning Chen, Hanzhi Liu, <b>Hongbo Wen</b>, Lev Pearson, Yanju Chen, Yu Feng</span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+          <!-- Thunderbolt (IACR 2025) -->
+          <tr>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">IACR 2025</span>
+              <span class="label label-crypto">Crypto & ZKP</span><br>
+              <a href="https://eprint.iacr.org/2025/709">
+                <papertitle>Thunderbolt: A Formally Verified Protocol for Off-Chain Bitcoin Transfers</papertitle>
+              </a><br>
+              <span class="pub-authors"><b>Hongbo Wen</b>, Hanzhi Liu, Jingyu Ke, Yanju Chen, Dahlia Malkhi, Yu Feng</span><br>
+              <span class="pub-links">
+                <a href="/pdfs/25_ARXIV_THUNDERBOLT.pdf">pdf</a>
+              </span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+          <!-- Multi-Agent Harnesses (arXiv 2025) -->
+          <tr>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">arXiv 2025</span>
+              <span class="label label-vuln">AI-Augmented Vuln Discovery</span><br>
+              <a href="https://arxiv.org/abs/2604.20801">
+                <papertitle>Synthesizing Multi-Agent Harnesses for Vulnerability Discovery</papertitle>
+              </a><br>
+              <span class="pub-authors">Hanzhi Liu, Chaofan Shou, Xinyi Liu, <b>Hongbo Wen</b>, Yanju Chen, Ruijie Fang, Yu Feng</span><br>
+              <span class="pub-links">
+                <a href="/pdfs/25_ARXIV_MultiAgent.pdf">pdf</a>
+              </span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+          <!-- Your Agent Is Mine (arXiv 2025) -->
+          <tr>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">arXiv 2025</span>
+              <span class="label label-agent">LLM Agent Security</span><br>
+              <a href="https://arxiv.org/abs/2604.08407">
+                <papertitle>Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain</papertitle>
+              </a><br>
+              <span class="pub-authors">Hanzhi Liu, Chaofan Shou, <b>Hongbo Wen</b>, Yanju Chen, Ruijie Fang, Yu Feng</span><br>
+              <span class="pub-links">
+                <a href="/pdfs/25_ARXIV_AgentMine.pdf">pdf</a>
+              </span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+          <!-- FORAY (CCS'24) -->
+          <tr>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">ACM CCS'24</span>
+              <span class="label label-vuln">AI-Augmented Vuln Discovery</span><br>
+              <a href="https://dl.acm.org/doi/10.1145/3658644.3690293">
+                <papertitle>FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols</papertitle>
+              </a><br>
+              <span class="pub-authors"><b>Hongbo Wen</b>, Hanzhi Liu, Jiaxin Song, Yanju Chen, Wenbo Guo, Yu Feng</span><br>
+              <span class="pub-links">
+                <a href="/pdfs/24_CCS_Foray.pdf">pdf</a> /
+                <a href="/bibtexs/Foray.bib">bib</a> /
+                <a href="https://github.com/whbjzzwjxq/Foray">code</a>
+              </span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+          <!-- ZKAP (USENIX Security'24) -->
+          <tr>
+            <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
+              <span class="pub-venue">USENIX Security'24</span>
+              <span class="label label-crypto">Crypto & ZKP</span><br>
+              <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/wen">
+                <papertitle>Practical Security Analysis of Zero-Knowledge Proof Circuits</papertitle>
+              </a><br>
+              <span class="pub-authors"><b>Hongbo Wen</b>, Jon Stephens, Yanju Chen, Kostas Ferles, Shankara Pailoor, Kyle Charbonnet, Isil Dillig, Yu Feng</span><br>
+              <span class="pub-links">
+                <a href="/pdfs/24_USENIXSEC_ZKAP.pdf">pdf</a> /
+                <a href="/bibtexs/ZKAP.bib">bib</a> /
+                <a href="https://github.com/whbjzzwjxq/ZKAP">code</a>
+              </span>
+            </td>
+            <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
+            </td>
+          </tr>
+        </table>
+
+        <!-- ==================== Zero-Day Discoveries ==================== -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px 2.5% 0 2.5%">
+              <h2 id="sec-vulns">Zero-Day Discoveries</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>LLM Agents</b></td>
+            <td style="padding:8px 0;vertical-align:top">
+              Filed <b>17 zero-day</b> security advisories on OpenClaw/ClawHub agent skills,
+              covering credential leakage, RCE, and PII exfiltration
+              (e.g., <a href="https://github.com/openclaw/clawhub/issues/1918">clawhub#1918</a>).
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>DeFi</b></td>
+            <td style="padding:8px 0;vertical-align:top">
+              Discovered <b>10 zero-day</b> vulnerabilities on BNB Chain DeFi protocols using <i>FORAY</i>,
+              with verified exploit traces matching &ge;$21M in historical loss patterns
+              (e.g., <a href="https://github.com/SunWeb3Sec/DeFiHackLabs/blob/e2cc0be819257db7db56a5a424babccdbb99412b/past/2022/README.md#20220606-discover---flashloan--price-oracle-manipulation">Discover</a>).
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>ZK Circuits</b></td>
+            <td style="padding:8px 0;vertical-align:top">
+              Discovered zero-day vulnerabilities in widely-used Circom projects using <i>ZKAP</i>,
+              including <b>0xPARC</b>, <b>Polygon-ZK</b>, <b>Axiom</b>, <b>iden3</b>, and <b>privacy-ethereum</b>
+              (e.g., <a href="https://github.com/0xPARC/zk-bug-tracker#3-circom-pairing-missing-output-check-constraint">circom-pairing</a>).
+            </td>
+          </tr>
+        </table>
+
+        <!-- ==================== Talks ==================== -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px 2.5% 0 2.5%">
+              <h2 id="sec-talks">Invited Talks</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr class="talk-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>Feb 2026</b></td>
+            <td style="padding:6px 0">Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits</td>
+            <td style="padding:6px 2.5%;white-space:nowrap;color:#666"><i>SoCalPLS</i>, USC, Los Angeles, CA</td>
+          </tr>
+          <tr class="talk-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>Feb 2025</b></td>
+            <td style="padding:6px 0">Tabby: Automated Programming of Efficient Zero-Knowledge Proof Circuits</td>
+            <td style="padding:6px 2.5%;white-space:nowrap;color:#666"><i>ETH Denver</i>, Denver, CO</td>
+          </tr>
+          <tr class="talk-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>Feb 2025</b></td>
+            <td style="padding:6px 0">Practical Security Analysis of Zero-Knowledge Proof Circuits</td>
+            <td style="padding:6px 2.5%;white-space:nowrap;color:#666"><i>SoCalPLS</i>, UCSD, San Diego, CA</td>
+          </tr>
+          <tr class="talk-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>Oct 2024</b></td>
+            <td style="padding:6px 0">FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols</td>
+            <td style="padding:6px 2.5%;white-space:nowrap;color:#666"><i>ACM CCS '24</i>, Salt Lake City, UT</td>
+          </tr>
+          <tr class="talk-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>Aug 2024</b></td>
+            <td style="padding:6px 0">Practical Security Analysis of Zero-Knowledge Proof Circuits</td>
+            <td style="padding:6px 2.5%;white-space:nowrap;color:#666"><i>USENIX Security '24</i>, Philadelphia, PA</td>
+          </tr>
+        </table>
+
+        <!-- ==================== Grants & Awards ==================== -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px 2.5% 0 2.5%">
+              <h2 id="sec-grants">Grants &amp; Awards</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr class="grant-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>2024</b></td>
+            <td style="padding:6px 0">
+              <a href="https://blog.ethereum.org/2025/01/17/academic-grants-recipients">Ethereum Foundation Academic Grant</a>, Cybersecurity and Privacy Track<br>
+              <span style="color:#666"><i>Topic: Sentinel — Adaptive Counter-Attack Synthesis for Mitigating Onchain Exploits</i><br>
+              Yu Feng, Hanzhi Liu, <b>Hongbo Wen</b></span>
+            </td>
+          </tr>
+          <tr class="grant-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>2023</b></td>
+            <td style="padding:6px 0">
+              <a href="https://blog.ethereum.org/2023/06/28/academic-grants-round-23">Ethereum Foundation Academic Grant</a>, Formal Verification Track<br>
+              <span style="color:#666"><i>Topic: Financial Model-Driven Attack Synthesis for DeFi</i><br>
+              Yu Feng, Yanju Chen, <b>Hongbo Wen</b><br>
+              This grant led to the development of <a href="#sec-publications">FORAY</a> (ACM CCS'24).</span>
+            </td>
+          </tr>
+          <tr class="grant-entry">
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap"><b>2022</b></td>
+            <td style="padding:6px 0">Academic Excellence Fellowship, UC Santa Barbara</td>
+          </tr>
+        </table>
+
+        <!-- ==================== Experience ==================== -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px 2.5% 0 2.5%">
+              <h2 id="sec-experience">Experience</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap;vertical-align:top"><b>2024 – Present</b></td>
+            <td style="padding:6px 0;vertical-align:top">
+              <b>Co-founder &amp; Principal Architect</b>, <a href="https://riema.xyz/">Riema Labs</a><br>
+              <span style="color:#666">Led a 50-person engineering team through an AI-first development transformation,
+              shipping cross-chain bridges, Bitcoin-native ZK infrastructure, and user-custody wallet systems
+              serving 150K+ users.</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap;vertical-align:top"><b>2022</b></td>
+            <td style="padding:6px 0;vertical-align:top">
+              <b>R&amp;D Engineer</b>, <a href="https://veridise.com/">Veridise Inc.</a><br>
+              <span style="color:#666">Smart contract and zero-knowledge proof security. Discovered 30+ critical vulnerabilities in widely-used ZK projects.</span>
+            </td>
+          </tr>
+        </table>
+
+        <!-- ==================== Service ==================== -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px 2.5% 0 2.5%">
+              <h2 id="sec-service">Service</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap;vertical-align:top"><b>2025</b></td>
+            <td style="padding:6px 0;vertical-align:top">
+              <a href="https://www.usenix.org/conference/usenixsecurity25/call-for-artifacts">USENIX Security '25</a> Artifact Evaluation Committee
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:6px 2.5%;width:15%;white-space:nowrap;vertical-align:top"><b>2023 – 2025</b></td>
+            <td style="padding:6px 0;vertical-align:top">
+              Teaching Assistant, CS162 Programming Languages, UC Santa Barbara
+            </td>
+          </tr>
+        </table>
+
+        <!-- Footer -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px 0">
+              <p style="text-align:center;font-size:small;color:#999;">
+                Design inspired by <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a>
               </p>
             </td>
           </tr>
         </table>
+
       </td>
     </tr>
   </table>
 </body>
 
 </html>
-
