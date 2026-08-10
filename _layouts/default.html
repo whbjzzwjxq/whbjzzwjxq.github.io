@@ -29,12 +29,13 @@
                 <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>.
               </p>
               <p>
-                I develop program analysis and synthesis techniques to secure complex software systems,
-                with applications in <b>LLM agent security</b>,
-                <b>cryptography &amp; zero-knowledge proofs</b>, and
-                <b>AI-augmented vulnerability discovery</b>.
-                My work has been funded by <b>Ethereum Foundation</b> and conducted in collaboration with
-                <b>Google Security</b> and <b>a16z crypto</b>.
+                I develop program analysis, synthesis, and verification techniques to ensure the soundness and correctness of computation across diverse algebraic systems, including finite-field constraints in zero-knowledge proof systems (ZKP), nonlinear arithmetic in financial protocols (Financial), and cryptographic protocols.
+              </p>
+              <p>
+                I am also interested in the full lifecycle of LLM-based coding systems, viewing reliable programming capabilities as a foundation for increasingly general-purpose AI systems.
+              </p>
+              <p>
+                My work has been supported by <b>Google Security</b>, <b>a16z crypto</b>, and <b>Ethereum Foundation</b>.
               </p>
               <p style="text-align:center">
                 <a href="mailto:hongbowen@ucsb.edu">Email</a> &nbsp;/&nbsp;
@@ -65,17 +66,22 @@
         <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:20px 2.5% 0 2.5%">
-              <h2 id="sec-publications">Publications</h2>
+              <div class="publications-heading">
+                <h2 id="sec-publications">Publications</h2>
+                <button id="arxiv-toggle" class="arxiv-toggle" type="button" aria-expanded="false" aria-controls="accepted-publications-current arxiv-publications accepted-publications-previous">Show arXiv</button>
+              </div>
               <p style="margin-top:4px;color:#666;">* Equal Contribution</p>
             </td>
           </tr>
         </table>
         <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody id="accepted-publications-current" class="accepted-publications">
           <!-- Beak (NDSS'27) -->
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">NDSS'27</span>
-              <span class="label label-crypto">Crypto &amp; ZKP</span><br>
+              <span class="label label-crypto">ZKP</span>
+              <span class="label label-method">Program Fuzzing</span><br>
               <papertitle>Revealing Semantic Gaps in Zero-Knowledge Virtual Machines via Obligation-Targeted Semantic Fuzzing</papertitle><br>
               <span class="pub-authors"><b>Hongbo Wen</b>, Jingyu Ke, Hanzhi Liu, Yanju Chen, Yu Feng</span><br>
               <span class="pub-links">
@@ -89,7 +95,7 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">ACM CCS'26</span>
-              <span class="label label-crypto">Crypto & ZKP</span><br>
+              <span class="label label-cryptographic">Cryptographic</span><br>
               <a href="https://eprint.iacr.org/2025/709">
                 <papertitle>Thunderbolt: Fast Asynchronous Off-Chain Bitcoin Transfers</papertitle>
               </a><br>
@@ -101,11 +107,13 @@
             <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
             </td>
           </tr>
+          </tbody>
+          <tbody id="arxiv-publications" hidden>
           <!-- VIGIL (arXiv 2026) -->
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">arXiv 2026</span>
-              <span class="label label-agent">LLM Agent Security</span><br>
+              <span class="label label-agent">LLM Security</span><br>
               <a href="https://arxiv.org/abs/2606.26524">
                 <papertitle>VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills</papertitle>
               </a><br>
@@ -121,7 +129,7 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">arXiv 2026</span>
-              <span class="label label-agent">LLM Agent Security</span><br>
+              <span class="label label-agent">LLM Security</span><br>
               <a href="https://arxiv.org/abs/2605.13044">
                 <papertitle>No Attack Required: Semantic Fuzzing for Specification Violations in Agent Skills</papertitle>
               </a><br>
@@ -137,7 +145,7 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">arXiv 2026</span>
-              <span class="label label-agent">LLM Agent Security</span><br>
+              <span class="label label-agent">LLM Security</span><br>
               <a href="https://arxiv.org/abs/2605.00314">
                 <papertitle>SEMIA: Auditing Agent Skills via Constraint-Guided Representation Synthesis</papertitle>
               </a><br>
@@ -153,7 +161,7 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">arXiv 2026</span>
-              <span class="label label-vuln">AI-Augmented Vuln Discovery</span><br>
+              <span class="label label-agent">LLM Security</span><br>
               <a href="https://arxiv.org/abs/2604.20801">
                 <papertitle>Synthesizing Multi-Agent Harnesses for Vulnerability Discovery</papertitle>
               </a><br>
@@ -169,7 +177,7 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">arXiv 2026</span>
-              <span class="label label-agent">LLM Agent Security</span><br>
+              <span class="label label-agent">LLM Security</span><br>
               <a href="https://arxiv.org/abs/2604.08407">
                 <papertitle>Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain</papertitle>
               </a><br>
@@ -181,11 +189,14 @@
             <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
             </td>
           </tr>
+          </tbody>
+          <tbody id="accepted-publications-previous" class="accepted-publications">
           <!-- Tabby (OOPSLA'25) -->
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">OOPSLA'25</span>
-              <span class="label label-crypto">Crypto & ZKP</span><br>
+              <span class="label label-crypto">ZKP</span>
+              <span class="label label-method">Program Optimization</span><br>
               <a href="https://dl.acm.org/doi/10.1145/3763110">
                 <papertitle>Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits</papertitle>
               </a><br>
@@ -201,7 +212,8 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">ACM CCS'24</span>
-              <span class="label label-vuln">AI-Augmented Vuln Discovery</span><br>
+              <span class="label label-vuln">Financial</span>
+              <span class="label label-method">Program Synthesis</span><br>
               <a href="https://dl.acm.org/doi/10.1145/3658644.3690293">
                 <papertitle>FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols</papertitle>
               </a><br>
@@ -219,7 +231,8 @@
           <tr>
             <td style="padding:12px 2.5%;width:75%;vertical-align:middle">
               <span class="pub-venue">USENIX Security'24</span>
-              <span class="label label-crypto">Crypto & ZKP</span><br>
+              <span class="label label-crypto">ZKP</span>
+              <span class="label label-method">Program Analysis</span><br>
               <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/wen">
                 <papertitle>Practical Security Analysis of Zero-Knowledge Proof Circuits</papertitle>
               </a><br>
@@ -233,6 +246,7 @@
             <td style="padding:8px 2.5%;width:25%;vertical-align:middle;min-width:100px">
             </td>
           </tr>
+          </tbody>
         </table>
 
         <!-- ==================== Zero-Day Discoveries ==================== -->
@@ -245,7 +259,7 @@
         </table>
         <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>LLM Agents</b></td>
+            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>LLM Security</b></td>
             <td style="padding:8px 0;vertical-align:top">
               Filed <b>50+ zero-day</b> security advisories on OpenClaw/ClawHub agent skills,
               covering credential leakage, RCE, PII exfiltration, and indirect prompt injection
@@ -253,7 +267,7 @@
             </td>
           </tr>
           <tr>
-            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>DeFi</b></td>
+            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>Financial</b></td>
             <td style="padding:8px 0;vertical-align:top">
               Discovered <b>10 zero-day</b> vulnerabilities on BNB Chain DeFi protocols using <i>FORAY</i>,
               with verified exploit traces matching &ge;$21M in historical loss patterns
@@ -261,9 +275,10 @@
             </td>
           </tr>
           <tr>
-            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>ZK Circuits</b></td>
+            <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>ZKP</b></td>
             <td style="padding:8px 0;vertical-align:top">
-              Discovered zero-day vulnerabilities in widely-used Circom projects using <i>ZKAP</i>,
+              Discovered <b>14 zero-day vulnerabilities</b> in zkVMs using <i>BEAK</i> (NDSS'27),
+              along with zero-day vulnerabilities in widely-used Circom projects using <i>ZKAP</i>,
               including <b>0xPARC</b>, <b>Polygon-ZK</b>, <b>Axiom</b>, <b>iden3</b>, and <b>privacy-ethereum</b>
               (e.g., <a href="https://github.com/0xPARC/zk-bug-tracker#3-circom-pairing-missing-output-check-constraint">circom-pairing</a>).
             </td>
@@ -402,6 +417,25 @@
       </td>
     </tr>
   </table>
+  <script>
+    (function () {
+      const toggle = document.getElementById('arxiv-toggle');
+      const publications = document.getElementById('arxiv-publications');
+      const acceptedPublications = document.querySelectorAll('.accepted-publications');
+
+      if (!toggle || !publications || !acceptedPublications.length) return;
+
+      toggle.addEventListener('click', function () {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        publications.hidden = isExpanded;
+        acceptedPublications.forEach(function (group) {
+          group.hidden = !isExpanded;
+        });
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        toggle.textContent = isExpanded ? 'Show arXiv' : 'Show Accepted';
+      });
+    }());
+  </script>
 </body>
 
 </html>
