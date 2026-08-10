@@ -29,10 +29,10 @@
                 <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>.
               </p>
               <p>
-                I develop program analysis, synthesis, and verification techniques to ensure the soundness and correctness of computation across diverse algebraic systems, including finite-field constraints in zero-knowledge proof systems (ZKP), nonlinear arithmetic in financial protocols (Financial), and cryptographic protocols.
+                I develop program analysis, synthesis, and verification techniques to ensure the soundness and correctness of computation across diverse algebraic systems, including finite-field constraints in zero-knowledge proof systems (ZKP), nonlinear arithmetic in financial protocols, and cryptographic protocols.
               </p>
               <p>
-                I am also interested in the full lifecycle of LLM-based coding systems, viewing reliable programming capabilities as a foundation for increasingly general-purpose AI systems.
+                I am also interested in the full lifecycle of LLM systems for coding tasks, viewing reliable coding capabilities as a foundation for increasingly general-purpose AI systems.
               </p>
               <p>
                 My work has been supported by <b>Google Security</b>, <b>a16z crypto</b>, and <b>Ethereum Foundation</b>.
@@ -68,7 +68,7 @@
             <td style="padding:20px 2.5% 0 2.5%">
               <div class="publications-heading">
                 <h2 id="sec-publications">Publications</h2>
-                <button id="arxiv-toggle" class="arxiv-toggle" type="button" aria-expanded="false" aria-controls="accepted-publications-current arxiv-publications accepted-publications-previous">Show arXiv</button>
+                <button id="arxiv-toggle" class="arxiv-toggle" type="button" aria-expanded="false" aria-controls="accepted-publications-current arxiv-publications accepted-publications-previous">Show LLM Track</button>
               </div>
               <p style="margin-top:4px;color:#666;">* Equal Contribution</p>
             </td>
@@ -277,8 +277,16 @@
           <tr>
             <td style="padding:8px 2.5%;width:15%;vertical-align:top;white-space:nowrap"><b>ZKP</b></td>
             <td style="padding:8px 0;vertical-align:top">
-              Discovered <b>14 zero-day vulnerabilities</b> in zkVMs using <i>BEAK</i> (NDSS'27),
-              along with zero-day vulnerabilities in widely-used Circom projects using <i>ZKAP</i>,
+              Discovered <b>14 zero-day vulnerabilities</b> with <i>BEAK</i> (NDSS'27) while analyzing eight zkVMs:
+              <a href="https://github.com/scroll-tech/ceno">Ceno</a>,
+              <a href="https://github.com/a16z/jolt">Jolt</a>,
+              <a href="https://github.com/nexus-xyz/nexus-zkvm">Nexus</a>,
+              <a href="https://github.com/openvm-org/openvm">OpenVM</a>,
+              <a href="https://github.com/brevis-network/pico">Pico</a>,
+              <a href="https://github.com/powdr-labs/powdr">Powdr</a>,
+              <a href="https://github.com/risc0/risc0">RISC Zero</a>, and
+              <a href="https://github.com/succinctlabs/sp1">SP1</a>,
+              as well as additional zero-day vulnerabilities in widely-used Circom projects using <i>ZKAP</i>,
               including <b>0xPARC</b>, <b>Polygon-ZK</b>, <b>Axiom</b>, <b>iden3</b>, and <b>privacy-ethereum</b>
               (e.g., <a href="https://github.com/0xPARC/zk-bug-tracker#3-circom-pairing-missing-output-check-constraint">circom-pairing</a>).
             </td>
@@ -432,7 +440,7 @@
           group.hidden = !isExpanded;
         });
         toggle.setAttribute('aria-expanded', String(!isExpanded));
-        toggle.textContent = isExpanded ? 'Show arXiv' : 'Show Accepted';
+        toggle.textContent = isExpanded ? 'Show LLM Track' : 'Show PL&Security Track';
       });
     }());
   </script>
